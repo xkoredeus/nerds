@@ -1,0 +1,47 @@
+.section {
+  &__title {
+    position: relative;
+    font-family: $os-bold;
+    font-size: 56px;
+    line-height: 64px;
+    text-transform: uppercase;
+    margin-bottom: 42px;
+
+    @include r(600) {
+      font-size: 38px;
+      line-height: 42px;
+    }
+
+    &--decor::after {
+      position: absolute;
+      content: '';
+      left: 4.5px;
+      bottom: -16px;
+      width: 60px;
+      height: 8px;
+      background-color: $red;
+      @include cubic;
+
+      @include r(600) {
+        width: 35px;
+        height: 6.5px;
+        bottom: -9px;
+      }
+    }
+  }
+
+  &__description {
+    text-align: center;
+  }
+
+  &--with-decor {
+    &:hover {
+      .section__title--decor {
+        &::after {
+          width: calc(100% - 8.5px);
+        }
+      }
+    }
+  }
+
+}

@@ -1,0 +1,29 @@
+button {
+  border: none;
+  box-shadow: none;
+  outline: none;
+  background-color: $tr;
+}
+
+.button {
+  position: relative;
+  font-family: $os-sembold;
+  font-size: 14px;
+  color: $blue;
+  text-align: center;
+  text-transform: uppercase;
+  background-color: $tr;
+  border: 2px solid $blue;
+  border-radius: 50px;
+  padding: 10.5px 73px;
+  outline: none;
+  box-shadow: none;
+  @include ease;
+  display: inline-block;
+
+  &:hover {
+    color: #fff;
+    background-color: $blue;
+    border-color: $blue;
+  }
+}

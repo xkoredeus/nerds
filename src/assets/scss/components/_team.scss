@@ -1,0 +1,233 @@
+.team {
+  padding: 60px 0;
+
+  @include r(768) {
+    padding-bottom: 50px;
+  }
+
+  @include r(332) {
+    .section__title {
+      &::after {
+        display: none;
+      }
+
+      span {
+        position: relative;
+
+        &::after {
+          position: absolute;
+          content: '';
+          left: 4.5px;
+          bottom: -9px;
+          width: 35px;
+          height: 6.5px;
+          background-color: $red;
+          @include cubic;
+        }
+      }
+    }
+  }
+
+  &-tabs {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 44px;
+    margin-bottom: 38px;
+
+    &__item {
+      position: relative;
+      font-family: $os-bold;
+      text-align: center;
+      letter-spacing: 0.8px;
+      color: $blue;
+      padding: 3.5px 20px;
+      @include ease;
+
+      span {
+        position: relative;
+      }
+
+      &:not(.team-tabs__item--active):hover {
+        color: $dark;
+      }
+      &--active {
+        color: #fff;
+        &::before {
+          position: absolute;
+          content: '';
+          width: 100%;
+          height: calc(100% + 10px);
+          background-color: $red;
+          border-radius: 8px;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%, -50%);
+        }
+      }
+    }
+  }
+
+  &__search {
+    min-width: 263px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+
+    @include r(600) {
+      width: 100%;
+    }
+  }
+
+  @include r(1200) {
+    .swiper-button-next {
+      right: 5px;
+    }
+    .swiper-button-prev {
+      left: 5px;
+    }
+  }
+
+  @include r(600) {
+    .swiper-button-next,
+    .swiper-button-prev{
+      top: 200px;
+    }
+    .swiper-button-next {
+      right: -25px;
+    }
+    .swiper-button-prev {
+      left: -25px;
+    }
+  }
+  
+  &-slider {
+    padding-bottom: 20px;
+
+    @include r(600) {
+      padding-bottom: 0;
+    }
+
+    &__wrapper {
+      position: relative;
+      margin-top: 30px;
+      margin-bottom: 150px;
+
+      @include r(600) {
+        margin-bottom: 15px;
+      }
+    }
+
+    &__item {
+      position: relative;
+      align-self: flex-end;
+
+      @include r(768) {
+        align-self: center;
+      }
+
+      &-top {
+        position: relative;
+        text-align: center;
+
+        @include r(600) {
+          img {
+            max-height: 359px;
+          }
+        }
+      }
+
+      &-bottom {
+        text-align: center;
+        margin-top: 35px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        @include rmin(600) {
+          display: none;
+        }
+      }
+
+      &-title {
+        position: absolute;
+        font-family: $os-bold;
+        font-size: 20px;
+        text-align: center;
+        text-transform: uppercase;
+        color: $light;
+        bottom: 31px;
+        width: 100%;
+        @include ease;
+
+        @include r(768) {
+          display: none;
+        }
+
+        @include r(600) {
+          display: block;
+          bottom: 26px;
+        }
+      }
+
+      &-subtitle {
+        font-family: $os-bold;
+        margin-bottom: 17px;
+      }
+
+      &-socials {
+        margin-top: 35px;
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+        @include r(578) {
+          justify-content: space-between;
+        }
+      }
+
+      @include rmin(1200) {
+        &.swiper-slide-active {
+          .team-slider__item-title {
+            font-size: 33px;
+            bottom: 26px;
+          }
+        }
+      }
+    }
+
+    &__form {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      padding-left: 48px;
+      margin-bottom: 23px;
+
+      @include r(1200) {
+        padding-left: 0;
+        margin-bottom: 0;
+        align-items: center;
+        img {
+          width: 152px;
+          height: 152px;
+        }
+      }
+
+      &-in {
+        min-width: 231px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      &-input {
+        font-size: 16px;
+        width: 100%;
+      }
+
+      &-button {
+        margin-top: 23px;
+      }
+    }
+  }
+}

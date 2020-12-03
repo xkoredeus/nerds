@@ -1,0 +1,17 @@
+.map {
+  min-height: 399px;
+  background-image: url(../img/map--desktop.jpg);
+  @include cv;
+  background-position: 50% 0;
+  background-color: $gray;
+
+  @include r(768) {
+    min-height: 402px;
+    background-image: url(../img/map--tablet.jpg);
+  }
+
+  @include r(576) {
+    min-height: 557px;
+    background-image: url(../img/map--mobile.jpg);
+  }
+}

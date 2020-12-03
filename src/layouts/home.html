@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    {{!— Required meta tags --}}
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="theme-color" content="#087A82">
+    <link rel="shortcut icon" href="{{root}}assets/img/favicon.ico" type="image/x-icon">
+    <title>New Project</title>
+    <link rel="stylesheet" href="{{root}}assets/css/app.css">
+</head>
+
+<body>
+    {{> preloader}}
+
+    <div class="overlay">
+        {{> banner}}
+        {{> team}}
+        {{> testimonials}}
+        {{> diff}}
+        {{> feed}}
+        {{> gallery}}
+        {{> map}}
+    </div>
+
+    {{> svg}}
+    <script src="{{root}}assets/js/app.js"></script>
+</body>
+</html>

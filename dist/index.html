@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="theme-color" content="#087A82">
+    <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon">
+    <title>New Project</title>
+    <link rel="stylesheet" href="assets/css/app.css">
+</head>
+
+<body>
+    <style>
+        .preloader__wrp {
+            position: fixed;
+            left: 0;
+            top: 0;
+            height: 100vh;
+            min-height: 300px;
+            width: 100vw;
+            background-color: #fff;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            z-index: 100;
+        }
+    
+        .preloader {
+            display: block;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            height: 50px;
+            width: 50px;
+            margin: -25px 0 0 -25px;
+        }
+    
+        .preloader span {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: #85548E;
+            -webkit-animation: preloader 1.7s infinite ease-in-out both;
+            animation: preloader 1.7s infinite ease-in-out both;
+            margin-right: 5px;
+        }
+    
+        .preloader span:nth-child(1) {
+            left: 0;
+            -webkit-animation-delay: 0.6s;
+            animation-delay: 0.6s;
+        }
+    
+        .preloader span:nth-child(2) {
+            left: 15px;
+            -webkit-animation-delay: 0.4s;
+            animation-delay: 0.4s;
+        }
+    
+        .preloader span:nth-child(3) {
+            left: 30px;
+            -webkit-animation-delay: 0.2s;
+            animation-delay: 0.2s;
+        }
+    
+        .preloader span:nth-child(4) {
+            left: 45px;
+            -webkit-animation-delay: 0.1s;
+            animation-delay: 0.1s;
+        }
+    
+        @-webkit-keyframes preloader {
+            0%, 80%, 100% {
+                -webkit-transform: scale(0);
+                transform: scale(0);
+                transform: scale(0);
+                opacity: 0;
+            }
+            40% {
+                -webkit-transform: scale(1);
+                transform: scale(1);
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+    
+        @keyframes preloader {
+            0%, 80%, 100% {
+                -webkit-transform: scale(0);
+                transform: scale(0);
+                transform: scale(0);
+                opacity: 0;
+            }
+            40% {
+                -webkit-transform: scale(1);
+                transform: scale(1);
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+    </style>
+    <div class="preloader__wrp">
+        <div class="preloader">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+
+    <div class="overlay">
+        <section class="banner">
+            <header class="header">
+                <div class="container">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <a class="header__logo" href="#">
+                            <svg class="header__logo-icon" width="20" height="20" >
+                                <use xlink:href="#logo"></use>
+                            </svg>
+                        </a>
+                        <div class="header__right d-flex justify-content-between align-items-center">
+                            <nav class="header__nav">
+                                <a class="header__nav-link" href="#">Home</a>
+                                <a class="header__nav-link" href="#">Kompetenzen</a>
+                                <a class="header__nav-link" href="#">Team</a>
+                                <a class="header__nav-link" href="#">Events</a>
+                                <a class="header__nav-link" href="#">Karriere</a>
+                                <a class="header__nav-link" href="#">Blog</a>
+                            </nav>
+            
+                            <button class="header__lang">
+                                <span>en</span>
+                            </button>
+                            <button class="header__hamburger js-toggle-menu">
+                                <span></span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <div class="banner__in">
+                <div class="container">
+                    <div class="row">
+                        <div class="offset-xl-3 col-xl-3 col-4 d-flex justify-content-end align-items-start">
+                            <img class="banner__image" src="assets/img/banner__image.png" alt="Banner Image">
+                        </div>
+                        <div class="col-xl-6 col-8">
+                            <div class="banner__title section__title section__title--decor">
+                                <span>Professionals</span>
+                                <span>Individuals</span>
+                                <span>N3rds</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="team section--with-decor">
+            <div class="container">
+                <div class="d-flex justify-content-center">
+                    <div class="section__title section__title--decor text-center">
+                        Meat the <span>team</span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-10 offset-1">
+                        <div class="section__description">Holistkönnerinnen und -könner sind keine gleichgeschalteten Roboter mit einer Musterlösung für jedes Problem. Es gibt keine Workshops in denen man lernt, wie bei Holisticon gearbeitet wird. Jede und jeder ist individuell und das ist auch gut so. Trotzdem verfolgen wir die gleichen Ziele: hochwertige Software, erfolgreiche Projekte, konstruktives Streiten, kreatives Chaos und Selbstorganisation.</div>
+                    </div>
+                </div>
+        
+                <div class="team-tabs d-none d-sm-flex">
+                    <button class="team-tabs__item team-tabs__item--active">
+                        <span>All</span>
+                    </button>
+                    <button class="team-tabs__item">
+                        <span>WEBAPPS</span>
+                    </button>
+                    <button class="team-tabs__item">
+                        <span>BPM / PROZESSAUTOMATISIERUNG</span>
+                    </button>
+                    <button class="team-tabs__item">
+                        <span>AGIL</span>
+                    </button>
+                    <button class="team-tabs__item">
+                        <span>SMART DATA</span>
+                    </button>
+                    <button class="team-tabs__item">
+                        <span>SOFTWARE-ARCHITEKTUR</span>
+                    </button>
+                    <button class="team-tabs__item">
+                        <span>SECURITY</span>
+                    </button>
+                    <button class="team-tabs__item">
+                        <span>UI/UX</span>
+                    </button>
+                    <button class="team-tabs__item">
+                        <span>LEBENDIGE SOFTWARE</span>
+                    </button>
+                    <button class="team-tabs__item">
+                        <span>BACKOFFICE</span>
+                    </button>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12 col-10 offset-1 offset-sm-0">
+                        <div class="d-flex justify-content-center w-100">
+                            <input class="team__search with-border" type="text" placeholder="Suche nach name">
+                        </div>
+        
+                        <div class="d-flex d-sm-none justify-content-center team__select-wrapper">
+                            <select class="js-select w-100">
+                                <option>All</option>
+                                <option>WEBAPPS</option>
+                                <option>BPM / PROZESSAUTOMATISIERUNG</option>
+                                <option>AGIL</option>
+                                <option>SMART DATA</option>
+                                <option>SOFTWARE-ARCHITEKTUR</option>
+                                <option>SECURITY</option>
+                                <option>UI/UX</option>
+                                <option>LEBENDIGE SOFTWARE</option>
+                                <option>BACKOFFICE</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+        
+        
+        
+        
+                <div class="row">
+                    <div class="col-sm-12 col-10 offset-1 offset-sm-0">
+                        <div class="team-slider__wrapper">
+        
+                            <div class="team-slider swiper-container">
+                                <div class="swiper-wrapper">
+                                    <div class="team-slider__item swiper-slide">
+                                        <div class="team-slider__item-top">
+                                            <img class="img-responsive" src="assets/img/team__img--1.jpg" alt="Teammate">
+                                            <div class="team-slider__item-title">Thomas</div>
+                                        </div>
+                                        <div class="team-slider__item-bottom">
+                                            <div class="team-slider__item-subtitle">Jane Smith</div>
+                                            <div class="team-slider__item-description">Agiler Coach aus Überzeugung: Transparente Kommunikation, wertschöpfende Arbeit und vor allem Respekt in der Zusammenarbeit treiben mich an.  Privatbin ich begeisterte WOLerin (Working Out Loud) und singe gern, egal ob im Chor oder beim Karaoke.</div>
+                                            <div class="team-slider__item-socials">
+                                                <a class="team-slider__item-social-link" href="#">
+                                                    <svg width="36" height="36">
+                                                        <use xlink:href="#tw"></use>
+                                                    </svg>
+                                                </a>
+                                                <a class="team-slider__item-social-link" href="#">
+                                                    <svg width="36" height="36">
+                                                        <use xlink:href="#x"></use>
+                                                    </svg>
+                                                </a>
+                                                <a class="team-slider__item-social-link" href="#">
+                                                    <svg width="36" height="36">
+                                                        <use xlink:href="#in"></use>
+                                                    </svg>
+                                                </a>
+                                                <a class="team-slider__item-social-link" href="#">
+                                                    <svg width="36" height="36">
+                                                        <use xlink:href="#ml"></use>
+                                                    </svg>
+                                                </a>
+                                                <a class="team-slider__item-social-link" href="#">
+                                                    <svg width="36" height="36">
+                                                        <use xlink:href="#bl"></use>
+                                                    </svg>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="team-slider__item swiper-slide">
+                                        <div class="team-slider__item-top">
+                                            <img class="img-responsive" src="assets/img/team__img--2.jpg" alt="Teammate">
+                                            <div class="team-slider__item-title">Jane</div>
+                                        </div>
+                                        <div class="team-slider__item-bottom">
+                                            <div class="team-slider__item-subtitle">Jane Smith</div>
+                                            <div class="team-slider__item-description">Agiler Coach aus Überzeugung: Transparente Kommunikation, wertschöpfende Arbeit und vor allem Respekt in der Zusammenarbeit treiben mich an.  Privatbin ich begeisterte WOLerin (Working Out Loud) und singe gern, egal ob im Chor oder beim Karaoke.</div>
+                                            <div class="team-slider__item-socials">
+                                                <a class="team-slider__item-social-link" href="#">
+                                                    <svg width="36" height="36">
+                                                        <use xlink:href="#tw"></use>
+                                                    </svg>
+                                                </a>
+                                                <a class="team-slider__item-social-link" href="#">
+                                                    <svg width="36" height="36">
+                                                        <use xlink:href="#x"></use>
+                                                    </svg>
+                                                </a>
+                                                <a class="team-slider__item-social-link" href="#">
+                                                    <svg width="36" height="36">
+                                                        <use xlink:href="#in"></use>
+                                                    </svg>
+                                                </a>
+                                                <a class="team-slider__item-social-link" href="#">
+                                                    <svg width="36" height="36">
+                                                        <use xlink:href="#ml"></use>
+                                                    </svg>
+                                                </a>
+                                                <a class="team-slider__item-social-link" href="#">
+                                                    <svg width="36" height="36">
+                                                        <use xlink:href="#bl"></use>
+                                                    </svg>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="team-slider__item swiper-slide">
+                                        <div class="team-slider__item-top">
+                                            <img class="img-responsive" src="assets/img/team__img--3.jpg" alt="Teammate">
+                                            <div class="team-slider__item-title">John</div>
+                                        </div>
+                                        <div class="team-slider__item-bottom">
+                                            <div class="team-slider__item-subtitle">Jane Smith</div>
+                                            <div class="team-slider__item-description">Agiler Coach aus Überzeugung: Transparente Kommunikation, wertschöpfende Arbeit und vor allem Respekt in der Zusammenarbeit treiben mich an.  Privatbin ich begeisterte WOLerin (Working Out Loud) und singe gern, egal ob im Chor oder beim Karaoke.</div>
+                                            <div class="team-slider__item-socials">
+                                                <a class="team-slider__item-social-link" href="#">
+                                                    <svg width="36" height="36">
+                                                        <use xlink:href="#tw"></use>
+                                                    </svg>
+                                                </a>
+                                                <a class="team-slider__item-social-link" href="#">
+                                                    <svg width="36" height="36">
+                                                        <use xlink:href="#x"></use>
+                                                    </svg>
+                                                </a>
+                                                <a class="team-slider__item-social-link" href="#">
+                                                    <svg width="36" height="36">
+                                                        <use xlink:href="#in"></use>
+                                                    </svg>
+                                                </a>
+                                                <a class="team-slider__item-social-link" href="#">
+                                                    <svg width="36" height="36">
+                                                        <use xlink:href="#ml"></use>
+                                                    </svg>
+                                                </a>
+                                                <a class="team-slider__item-social-link" href="#">
+                                                    <svg width="36" height="36">
+                                                        <use xlink:href="#bl"></use>
+                                                    </svg>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="team-slider__item swiper-slide">
+                                        <div class="team-slider__item-top">
+                                            <img class="img-responsive" src="assets/img/team__img--1.jpg" alt="Teammate">
+                                            <div class="team-slider__item-title">Thomas</div>
+                                        </div>
+                                        <div class="team-slider__item-bottom">
+                                            <div class="team-slider__item-subtitle">Jane Smith</div>
+                                            <div class="team-slider__item-description">Agiler Coach aus Überzeugung: Transparente Kommunikation, wertschöpfende Arbeit und vor allem Respekt in der Zusammenarbeit treiben mich an.  Privatbin ich begeisterte WOLerin (Working Out Loud) und singe gern, egal ob im Chor oder beim Karaoke.</div>
+                                            <div class="team-slider__item-socials">
+                                                <a class="team-slider__item-social-link" href="#">
+                                                    <svg width="36" height="36">
+                                                        <use xlink:href="#tw"></use>
+                                                    </svg>
+                                                </a>
+                                                <a class="team-slider__item-social-link" href="#">
+                                                    <svg width="36" height="36">
+                                                        <use xlink:href="#x"></use>
+                                                    </svg>
+                                                </a>
+                                                <a class="team-slider__item-social-link" href="#">
+                                                    <svg width="36" height="36">
+                                                        <use xlink:href="#in"></use>
+                                                    </svg>
+                                                </a>
+                                                <a class="team-slider__item-social-link" href="#">
+                                                    <svg width="36" height="36">
+                                                        <use xlink:href="#ml"></use>
+                                                    </svg>
+                                                </a>
+                                                <a class="team-slider__item-social-link" href="#">
+                                                    <svg width="36" height="36">
+                                                        <use xlink:href="#bl"></use>
+                                                    </svg>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="team-slider__item swiper-slide">
+                                        <form class="team-slider__form">
+                                            <img class="img-responsive" src="assets/img/team-form__img.png" alt="Und du?">
+                                            <div class="team-slider__form-in">
+                                                <input class="team-slider__form-input" type="text" placeholder="Name">
+                                                <input class="team-slider__form-input" type="email" placeholder="E-mail">
+                                                <input class="team-slider__form-input" type="tel" placeholder="Telephone">
+                                                <button class="button team-slider__form-button" type="submit">Join us</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="team-slider__item swiper-slide">
+                                        <div class="team-slider__item-top">
+                                            <img class="img-responsive" src="assets/img/team__img--3.jpg" alt="Teammate">
+                                            <div class="team-slider__item-title">Jane</div>
+                                        </div>
+                                        <div class="team-slider__item-bottom">
+                                            <div class="team-slider__item-subtitle">Jane Smith</div>
+                                            <div class="team-slider__item-description">Agiler Coach aus Überzeugung: Transparente Kommunikation, wertschöpfende Arbeit und vor allem Respekt in der Zusammenarbeit treiben mich an.  Privatbin ich begeisterte WOLerin (Working Out Loud) und singe gern, egal ob im Chor oder beim Karaoke.</div>
+                                            <div class="team-slider__item-socials">
+                                                <a class="team-slider__item-social-link" href="#">
+                                                    <svg width="36" height="36">
+                                                        <use xlink:href="#tw"></use>
+                                                    </svg>
+                                                </a>
+                                                <a class="team-slider__item-social-link" href="#">
+                                                    <svg width="36" height="36">
+                                                        <use xlink:href="#x"></use>
+                                                    </svg>
+                                                </a>
+                                                <a class="team-slider__item-social-link" href="#">
+                                                    <svg width="36" height="36">
+                                                        <use xlink:href="#in"></use>
+                                                    </svg>
+                                                </a>
+                                                <a class="team-slider__item-social-link" href="#">
+                                                    <svg width="36" height="36">
+                                                        <use xlink:href="#ml"></use>
+                                                    </svg>
+                                                </a>
+                                                <a class="team-slider__item-social-link" href="#">
+                                                    <svg width="36" height="36">
+                                                        <use xlink:href="#bl"></use>
+                                                    </svg>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+        
+                                <div class="swiper-scrollbar d-none d-xl-block"></div>
+                            </div>
+                            <div class="team-slider__nav">
+                                <div class="swiper-button-next">
+                                    <span>
+                                        <svg width="18" height="33">
+                                            <use xlink:href="#chevron--next"></use>
+                                        </svg>
+                                    </span>
+                                </div>
+                                <div class="swiper-button-prev">
+                                    <span>
+                                        <svg width="18" height="33">
+                                            <use xlink:href="#chevron--prev"></use>
+                                        </svg>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        
+            </div>
+        </section>
+        <section class="testimonials section--with-decor">
+            <div class="container">
+                <div class="d-flex justify-content-center">
+                    <div class="section__title section__title--decor text-center">
+                        Who we are
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-10 offset-1">
+                        <div class="section__description">Holistkönnerinnen und -könner sind keine gleichgeschalteten Roboter mit einer Musterlösung für jedes Problem. Es gibt keine Workshops in denen man lernt, wie bei Holisticon gearbeitet wird. Jede und jeder ist individuell und das ist auch gut so. Trotzdem verfolgen wir die gleichen Ziele: hochwertige Software, erfolgreiche Projekte, konstruktives Streiten, kreatives Chaos und Selbstorganisation.</div>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonials__in">
+                <div class="testimonials__grid">
+                    <div class="testimonials__item">
+                        <img class="testimonials__image" src="assets/img/testimonials__img--1.png" alt="testimonial image">
+                    </div>
+                    <div class="testimonials__item">
+                        <img class="testimonials__image" src="assets/img/testimonials__img--2.png" alt="testimonial image">
+                    </div>
+                    <div class="testimonials__item">
+                        <img class="testimonials__image" src="assets/img/testimonials__img--3.png" alt="testimonial image">
+                    </div>
+                    <div class="testimonials__item">
+                        <img class="testimonials__image" src="assets/img/testimonials__img--4.png" alt="testimonial image">
+                    </div>
+                    <div class="testimonials__item">
+                        <img class="testimonials__image" src="assets/img/testimonials__img--5.png" alt="testimonial image">
+                    </div>
+                    <div class="testimonials__item">
+                        <img class="testimonials__image" src="assets/img/testimonials__img--6.png" alt="testimonial image">
+                    </div>
+                    <div class="testimonials__item">
+                        <img class="testimonials__image" src="assets/img/testimonials__img--7.png" alt="testimonial image">
+                    </div>
+                    <div class="testimonials__item">
+                        <img class="testimonials__image" src="assets/img/testimonials__img--8.png" alt="testimonial image">
+                    </div>
+                    <div class="testimonials__item">
+                        <img class="testimonials__image" src="assets/img/testimonials__img--9.png" alt="testimonial image">
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-4 offset-sm-4 col-8 offset-2">
+                            <div class="testimonials-slider__wrapper">
+                                <div class="testimonials-slider swiper-container">
+                                    <div class="swiper-wrapper">
+                                        <div class="testimonials-slider__item swiper-slide">
+                                            <div class="testimonials-slider__item-top">
+                                                <svg width="100%" height="100%">
+                                                    <use xlink:href="#shape"></use>
+                                                </svg>
+                                                <div class="testimonials-slider__item-title">56%</div>
+                                            </div>
+                                            <div class="testimonials-slider__item-bottom">
+                                                <div class="testimonials-slider__item-subtitle">of us prefer coffee&nbsp;)</div>
+                                                <div class="testimonials-slider__item-description">But there are many other preferences - Matcha tea is on the second place!</div>
+                                            </div>
+                                        </div>
+                                        <div class="testimonials-slider__item swiper-slide">
+                                            <div class="testimonials-slider__item-top">
+                                                <svg width="100%" height="100%">
+                                                    <use xlink:href="#shape"></use>
+                                                </svg>
+                                                <div class="testimonials-slider__item-title">32</div>
+                                            </div>
+                                            <div class="testimonials-slider__item-bottom">
+                                                <div class="testimonials-slider__item-subtitle">of us are cat lovers :)</div>
+                                                <div class="testimonials-slider__item-description">It’s 54% of our team! But we have even iguanas as pets. </div>
+                                            </div>
+                                        </div>
+                                        <div class="testimonials-slider__item swiper-slide">
+                                            <div class="testimonials-slider__item-top">
+                                                <svg width="100%" height="100%">
+                                                    <use xlink:href="#shape"></use>
+                                                </svg>
+                                                <div class="testimonials-slider__item-title">56%</div>
+                                            </div>
+                                            <div class="testimonials-slider__item-bottom">
+                                                <div class="testimonials-slider__item-subtitle">of us prefer coffee&nbsp;)</div>
+                                                <div class="testimonials-slider__item-description">But there are many other preferences - Matcha tea is on the second place!</div>
+                                            </div>
+                                        </div>
+                                        <div class="testimonials-slider__item swiper-slide">
+                                            <div class="testimonials-slider__item-top">
+                                                <svg width="100%" height="100%">
+                                                    <use xlink:href="#shape"></use>
+                                                </svg>
+                                                <div class="testimonials-slider__item-title">32</div>
+                                            </div>
+                                            <div class="testimonials-slider__item-bottom">
+                                                <div class="testimonials-slider__item-subtitle">of us are cat lovers :)</div>
+                                                <div class="testimonials-slider__item-description">It’s 54% of our team! But we have even iguanas as pets. </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-pagination"></div>
+                                </div>
+                                <div class="testimonials-slider__nav">
+                                    <div class="swiper-button-next">
+                                        <span>
+                                            <svg width="18" height="33">
+                                                <use xlink:href="#chevron--next"></use>
+                                            </svg>
+                                        </span>
+                                    </div>
+                                    <div class="swiper-button-prev">
+                                        <span>
+                                            <svg width="18" height="33">
+                                                <use xlink:href="#chevron--prev"></use>
+                                            </svg>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-center">
+                        <button class="testimonials__button">
+                            <span class="testimonials__button-circle">
+                                <svg width="18" height="33">
+                                    <use xlink:href="#chevron--next"></use>
+                                </svg>
+                            </span>
+                            <span class="testimonials__button-text">Komm' Ins Team</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="diff d-none d-xl-block">
+            <div class="container">
+                <div class="d-flex justify-content-center">
+                    <div class="section__title text-center">
+                        We are different.<br>
+                        and this unites us
+                    </div>
+                </div>
+            </div>
+            <div class="diff__in">
+                <svg class="diff__border" width="100%" height="249" >
+                    <use xlink:href="#diff-shape"></use>
+                </svg>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-6 offset-xl-3">
+                            <div class="diff-slider__wrapper">
+                                <div class="diff-slider">
+                                    <div class="diff-slider__top swiper-container">
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide">
+                                                <img src="assets/img/diff__top-image--1.jpg" alt="Unites Image">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="assets/img/diff__top-image--2.jpg" alt="Unites Image">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="diff-slider__bottom swiper-container">
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide">
+                                                <img src="assets/img/diff__bottom-image--2.jpg" alt="Unites Image">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="assets/img/diff__bottom-image--1.jpg" alt="Unites Image">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="diff__nav">
+                                    <div class="diff__nav--top">
+                                        <div class="swiper-button-next">
+                                            <span>
+                                                <svg width="15" height="30">
+                                                    <use xlink:href="#chevron--next"></use>
+                                                </svg>
+                                            </span>
+                                        </div>
+                                        <div class="swiper-button-prev">
+                                            <span>
+                                                <svg width="15" height="30">
+                                                    <use xlink:href="#chevron--prev"></use>
+                                                </svg>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="diff__nav--bottom">
+                                        <div class="swiper-button-next">
+                                            <span>
+                                                <svg width="15" height="30">
+                                                    <use xlink:href="#chevron--next"></use>
+                                                </svg>
+                                            </span>
+                                        </div>
+                                        <div class="swiper-button-prev">
+                                            <span>
+                                                <svg width="15" height="30">
+                                                    <use xlink:href="#chevron--prev"></use>
+                                                </svg>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <div class="row">
+                        <div class="col-xl-10 offset-xl-1">
+                            <div class="section__description">Holistkönnerinnen und -könner sind keine gleichgeschalteten Roboter mit einer Musterlösung für jedes Problem. Es gibt keine Workshops in denen man lernt, wie bei Holisticon gearbeitet wird. Jede und jeder ist individuell und das ist auch gut so. Trotzdem verfolgen wir die gleichen Ziele: hochwertige Software, erfolgreiche Projekte, konstruktives Streiten, kreatives Chaos und Selbstorganisation.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+        </section>
+        <section class="feed d-none d-xl-block">
+            <div class="container">
+                <div class="d-flex justify-content-center">
+                    <div class="section__title text-center">Join us!</div>
+                </div>
+                <div class="row">
+                    <div class="col-xl-6 offset-xl-3">
+                        <form class="feed-form">
+                            <input class="feed-form__input" type="text" placeholder="Name">
+                            <input class="feed-form__input" type="email" placeholder="E-Mail">
+                            <input class="feed-form__input" type="tel" placeholder="Telefon">
+                            <button class="button feed__button" type="button">Schreib' uns</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="gallery">
+            <div class="gallery__item gallery__item--big js-gallery-toggle">
+                <div class="gallery__item-bg" style="background-image: url(assets/img/gallery__img--1.jpg);"></div>
+                <svg class="gallery__item-brackets" width="160" height="119">
+                    <use xlink:href="#brackets"></use>
+                </svg>
+                <div class="gallery__item-in">
+                    <div class="gallery__item-title">Kai Lichtenfels 1</div>
+                    <div class="gallery__item-position">Title position</div>
+                    <div class="gallery__item-description">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a</div>
+                </div>
+            </div>
+            <div class="gallery__item js-gallery-toggle">
+                <div class="gallery__item-bg" style="background-image: url(assets/img/gallery__img--2.jpg);"></div>
+                <svg class="gallery__item-brackets" width="160" height="119">
+                    <use xlink:href="#brackets"></use>
+                </svg>
+                <div class="gallery__item-in">
+                    <div class="gallery__item-title">Kai Lichtenfels 2</div>
+                    <div class="gallery__item-position">Title position</div>
+                    <div class="gallery__item-description">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. </div>
+                </div>
+            </div>
+            <div class="gallery__item gallery__item--video">
+                <div class="gallery__item-bg" style="background-image: url(assets/img/gallery__img--3.jpg);"></div>
+                <button class="gallery__item-button" data-src="https://www.youtube.com/watch?v=XPpTgCho5ZA" data-fancybox>
+                    <svg width="36" height="36">
+                        <use xlink:href="#play"></use>
+                    </svg>
+                </button>
+            </div>
+            <div class="gallery__item gallery__item--big js-gallery-toggle">
+                <div class="gallery__item-bg" style="background-image: url(assets/img/gallery__img--4.jpg);"></div>
+                <svg class="gallery__item-brackets" width="160" height="119">
+                    <use xlink:href="#brackets"></use>
+                </svg>
+                <div class="gallery__item-in">
+                    <div class="gallery__item-title">Kai Lichtenfels 4</div>
+                    <div class="gallery__item-position">Title position</div>
+                    <div class="gallery__item-description">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a</div>
+                </div>
+            </div>
+        </section>
+        <section class="map"></section>
+    </div>
+
+    <svg width="0" height="0" class="svg-sprite">
+        <symbol id="logo" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M10 0H20V9.9921V10.0004C20 15.5229 15.5228 20 10 20C4.47719 20 0 15.5229 0 10.0004C0 4.4779 4.47719 0 10 0ZM16.6933 9.9921V3.30686H10C6.30869 3.30686 3.30586 6.30931 3.30586 10.0004C3.30586 13.6907 6.30869 16.694 10 16.694C13.6838 16.694 16.6825 13.7023 16.6933 10.0204V9.9921Z" />
+        </symbol>
+        <symbol id="chevron--prev" viewBox="0 0 18 33" xmlns="http://www.w3.org/2000/svg">
+            <path d="M15.4393 32.5607C16.0251 33.1464 16.9749 33.1464 17.5607 32.5607C18.1098 32.0115 18.1442 31.1424 17.6636 30.5533L17.5607 30.4393L3.621 16.5L17.5607 2.56066C18.1098 2.01148 18.1442 1.14242 17.6636 0.553261L17.5607 0.439339C17.0115 -0.109837 16.1424 -0.144161 15.5533 0.336369L15.4393 0.439339L0.43934 15.4393C-0.109835 15.9885 -0.144158 16.8576 0.33637 17.4467L0.43934 17.5607L15.4393 32.5607Z" />
+        </symbol>
+        <symbol id="chevron--next" viewBox="0 0 18 33" xmlns="http://www.w3.org/2000/svg">
+            <path d="M2.56066 32.5607C1.97487 33.1464 1.02513 33.1464 0.439341 32.5607C-0.109835 32.0115 -0.144157 31.1424 0.33637 30.5533L0.439341 30.4393L14.379 16.5L0.439341 2.56066C-0.109835 2.01148 -0.144157 1.14242 0.33637 0.553261L0.439341 0.439339C0.988516 -0.109837 1.85758 -0.144161 2.44674 0.336369L2.56066 0.439339L17.5607 15.4393C18.1098 15.9885 18.1442 16.8576 17.6636 17.4467L17.5607 17.5607L2.56066 32.5607Z" />
+        </symbol>
+        <symbol id="shape" viewBox="0 0 215 215" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 107.5C0 48.1294 48.1294 0 107.5 0H215V107.5C215 166.871 166.871 215 107.5 215C48.1294 215 0 166.871 0 107.5Z" fill="#FF2851"/>
+        </symbol>
+        <symbol id="diff-shape" viewBox="0 0 1440 249" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M1443 248.695V0H719.509H0V245.598C198.908 91.6299 448.508 0 719.509 0C992.321 0 1243.45 92.8591 1443 248.695Z"/>
+        </symbol>
+        <symbol id="brackets" viewBox="0 0 160 119" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M44.9257 50.4844C35.1592 50.4844 26.6242 53.6297 21.2314 60.6853C19.7452 62.6404 19.0658 62.4279 19.4055 60.0477C23.3546 34.1631 39.2357 18.1818 65.4352 10.8287C67.7707 10.1487 69.0021 7.89599 68.1953 5.6008L67.3885 3.30561C66.5817 1.01043 63.9915 -0.434689 61.6561 0.117856C21.9533 9.59612 0 38.286 0 74.8389C0 102.169 14.6921 119 38.2166 119C63.8217 119 76.0085 102.594 76.0085 83.2546C76.0085 62.6829 62.9724 50.4844 44.9257 50.4844ZM128.917 50.4844C119.151 50.4844 110.616 53.6297 105.223 60.6853C103.779 62.6404 103.057 62.4279 103.439 60.0477C107.389 34.1631 123.27 18.1818 149.469 10.8287C151.805 10.1487 153.036 7.89599 152.229 5.6008L151.423 3.30561C150.616 1.01043 148.025 -0.434689 145.69 0.117856C105.945 9.59612 83.9915 38.286 83.9915 74.8389C83.9915 102.169 98.6837 119 122.208 119C147.813 119 160 102.594 160 83.2546C160 62.6829 146.964 50.4844 128.917 50.4844Z" />
+        </symbol>
+    
+        <symbol id="play" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M0 18C0 8.07754 8.07001 0 18 0C27.9225 0 36 8.07754 36 18C36 27.9302 27.9225 36 18 36C8.07001 36 0 27.9302 0 18ZM14.1974 24.7426L25.0051 18.9076C25.725 18.5176 25.725 17.4825 25.0051 17.0925L14.1974 11.265C13.5075 10.89 12.6749 11.3926 12.6749 12.1725V23.8352C12.6749 24.615 13.5075 25.11 14.1974 24.7426Z" />
+        </symbol>
+    
+        <symbol id="tw" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M26.5736 13.1219C25.9468 13.3988 25.2723 13.5856 24.5646 13.6692C25.2872 13.2392 25.8413 12.5581 26.1026 11.7457C25.4267 12.1443 24.6784 12.4336 23.8814 12.5898C23.2436 11.9142 22.3344 11.4918 21.3283 11.4918C19.3968 11.4918 17.8308 13.0483 17.8308 14.9683C17.8308 15.2404 17.8616 15.5056 17.9215 15.7605C15.0144 15.6153 12.4367 14.2315 10.7115 12.1282C10.4104 12.6414 10.238 13.2385 10.238 13.8762C10.238 15.0822 10.8555 16.1464 11.794 16.7697C11.2209 16.7515 10.6814 16.595 10.2097 16.3346C10.2093 16.349 10.2093 16.3638 10.2093 16.3786C10.2093 18.0627 11.4151 19.4675 13.0154 19.7873C12.7219 19.8665 12.4128 19.9091 12.0937 19.9091C11.8681 19.9091 11.649 19.8874 11.4355 19.8465C11.8809 21.2275 13.1725 22.233 14.7029 22.2608C13.5058 23.1933 11.9979 23.7492 10.3588 23.7492C10.0768 23.7492 9.79817 23.7327 9.52441 23.7003C11.0728 24.6872 12.9112 25.2623 14.8863 25.2623C21.3204 25.2623 24.8383 19.9652 24.8383 15.3711C24.8383 15.2205 24.8352 15.0701 24.8286 14.9209C25.5118 14.4317 26.105 13.8191 26.5736 13.1219Z" fill="#4EB4F9"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M18 0C8.05887 0 0 8.05887 0 18C0 27.9411 8.05887 36 18 36C27.9411 36 36 27.9411 36 18C36 8.05887 27.9411 0 18 0ZM18 1.99455C26.8396 1.99455 34.0054 9.16043 34.0054 18C34.0054 26.8396 26.8396 34.0054 18 34.0054C9.16043 34.0054 1.99455 26.8396 1.99455 18C1.99455 9.16043 9.16043 1.99455 18 1.99455Z" fill="#4EB4F9"/>
+        </symbol>
+        <symbol id="x" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M20.139 27.2296L16.0984 20.0316L22.3695 8.8689H26.5902L20.3193 20.0316L24.3601 27.2296H20.139ZM13.5755 21.9837L16.7541 16.5264L14.3703 12.1476H10.3356L12.7196 16.5264L9.54102 21.9837H13.5755Z" fill="#4EB4F9"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M18 0C8.05887 0 0 8.05887 0 18C0 27.9411 8.05887 36 18 36C27.9411 36 36 27.9411 36 18C36 8.05887 27.9411 0 18 0ZM18 1.99455C26.8396 1.99455 34.0054 9.16043 34.0054 18C34.0054 26.8396 26.8396 34.0054 18 34.0054C9.16043 34.0054 1.99455 26.8396 1.99455 18C1.99455 9.16043 9.16043 1.99455 18 1.99455Z" fill="#4EB4F9"/>
+        </symbol>
+        <symbol id="in" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M25.9511 18.2622C25.9511 15.3084 24.356 13.9339 22.2294 13.9339C20.5133 13.9339 19.7443 14.8673 19.3158 15.5221V14.1598H16.0826C16.1255 15.0622 16.0826 23.7754 16.0826 23.7754H19.3158V18.4053C19.3158 18.1186 19.3367 17.8315 19.4224 17.6263C19.6558 17.052 20.1876 16.4574 21.0804 16.4574C22.2508 16.4574 22.7184 17.3391 22.7184 18.6313V23.7759H25.9511V18.2622ZM12.6767 12.8474C13.8037 12.8474 14.5061 12.1084 14.5061 11.1853C14.4851 10.2424 13.8037 9.52454 12.6981 9.52454C11.5924 9.52454 10.8691 10.2419 10.8691 11.1853C10.8691 12.1084 11.571 12.8474 12.6562 12.8474H12.6767ZM14.2932 23.7754V14.1598H11.0606V23.7754H14.2932Z" fill="#4EB4F9"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M18 0C8.05887 0 0 8.05887 0 18C0 27.9411 8.05887 36 18 36C27.9411 36 36 27.9411 36 18C36 8.05887 27.9411 0 18 0ZM18 1.99455C26.8396 1.99455 34.0054 9.16043 34.0054 18C34.0054 26.8396 26.8396 34.0054 18 34.0054C9.16043 34.0054 1.99455 26.8396 1.99455 18C1.99455 9.16043 9.16043 1.99455 18 1.99455Z" fill="#4EB4F9"/>
+        </symbol>
+        <symbol id="ml" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M25 10.3771H11C9.89543 10.3771 9 11.2725 9 12.3771V22.3771C9 23.4816 9.89543 24.3771 11 24.3771H25C26.1046 24.3771 27 23.4816 27 22.3771V12.3771C27 11.2725 26.1046 10.3771 25 10.3771ZM11 12.3771H25V14.0927L18.9 18.6677L18.7736 18.7529C18.255 19.0653 17.5923 19.0369 17.1 18.6677L11 14.0927V12.3771ZM21.7831 17.7554L25 15.3427V20.0207L21.7831 17.7554ZM19.5 19.4677L20.942 18.3862L25 21.2438V22.3771H11V21.2844L15.086 18.4072L16.5 19.4677L16.6602 19.5784C17.5315 20.132 18.6634 20.0951 19.5 19.4677ZM14.2449 17.7764L11 15.3427V20.0614L14.2449 17.7764Z" fill="#4EB4F9"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M18 0C8.05887 0 0 8.05887 0 18C0 27.9411 8.05887 36 18 36C27.9411 36 36 27.9411 36 18C36 8.05887 27.9411 0 18 0ZM18 1.99455C26.8396 1.99455 34.0054 9.16043 34.0054 18C34.0054 26.8396 26.8396 34.0054 18 34.0054C9.16043 34.0054 1.99455 26.8396 1.99455 18C1.99455 9.16043 9.16043 1.99455 18 1.99455Z" fill="#4EB4F9"/>
+        </symbol>
+        <symbol id="bl" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M11 11.3771C10.4477 11.3771 10 11.8248 10 12.3771V22.3771C10 22.9294 10.4477 23.3771 11 23.3771H12.9597V26.3542L16.6224 23.3771H25C25.5523 23.3771 26 22.9294 26 22.3771V12.3771C26 11.8248 25.5523 11.3771 25 11.3771H11ZM15 18.3771C15.5523 18.3771 16 17.9294 16 17.3771C16 16.8248 15.5523 16.3771 15 16.3771C14.4477 16.3771 14 16.8248 14 17.3771C14 17.9294 14.4477 18.3771 15 18.3771ZM19 17.3771C19 17.9294 18.5523 18.3771 18 18.3771C17.4477 18.3771 17 17.9294 17 17.3771C17 16.8248 17.4477 16.3771 18 16.3771C18.5523 16.3771 19 16.8248 19 17.3771ZM21 18.3771C21.5523 18.3771 22 17.9294 22 17.3771C22 16.8248 21.5523 16.3771 21 16.3771C20.4477 16.3771 20 16.8248 20 17.3771C20 17.9294 20.4477 18.3771 21 18.3771Z" fill="#4EB4F9"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M18 0C8.05887 0 0 8.05887 0 18C0 27.9411 8.05887 36 18 36C27.9411 36 36 27.9411 36 18C36 8.05887 27.9411 0 18 0ZM18 1.99455C26.8396 1.99455 34.0054 9.16043 34.0054 18C34.0054 26.8396 26.8396 34.0054 18 34.0054C9.16043 34.0054 1.99455 26.8396 1.99455 18C1.99455 9.16043 9.16043 1.99455 18 1.99455Z" fill="#4EB4F9"/>
+        </symbol>
+    
+    
+    
+    
+    </svg>
+    <script src="assets/js/app.js"></script>
+</body>
+</html>

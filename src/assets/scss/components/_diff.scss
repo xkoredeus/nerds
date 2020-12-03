@@ -1,0 +1,75 @@
+.diff {
+  .section__title {
+    margin-bottom: 70px;
+  }
+
+  &__in {
+    position: relative;
+    background-color: $gray;
+    padding-top: 80px;
+    padding-bottom: 130px;
+
+    .container {
+      position: relative;
+    }
+  }
+
+  &__border {
+    position: absolute;
+    top: 0;
+    left: 0;
+    fill: $light;
+  }
+
+  &-slider {
+    border-radius: 50%;
+    background-color: #fff;
+    max-width: 551px;
+    min-height: 551px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 16px;
+    overflow: hidden;
+
+    @include flex-center;
+
+    &__wrapper {
+      position: relative;
+    }
+
+    &__top {
+      position: absolute;
+      left: 50%;
+      top: 110px;
+      width: 100%;
+      transform: translateX(-50%);
+      z-index: 2;
+
+      .swiper-slide {
+        text-align: center;
+      }
+    }
+
+    &__bottom {
+      .swiper-slide {
+        text-align: center;
+        @include flex-center;
+      }
+      img {
+        max-height: 514px;
+        width: auto;
+      }
+    }
+  }
+
+  &__nav {
+    &--top {
+      .swiper-button {
+        &-prev,
+        &-next {
+          top: 170px;
+        }
+      }
+    }
+  }
+}
